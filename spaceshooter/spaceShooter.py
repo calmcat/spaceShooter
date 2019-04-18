@@ -555,6 +555,13 @@ while running:
     draw_lives(screen, WIDTH - 100, 5, player.lives, player_mini_img)
 
     ## Done after drawing everything to the screen
-    pygame.display.flip()       
+    pygame.display.flip()  
+    
+ ##display the game over screen
+screen.fill(BLACK)
+draw_text(screen, "Game Over", 30, WIDTH/2, HEIGHT/2)
+draw_text(screen, "Score:"+str(score), 30, WIDTH/2, (HEIGHT/2)+40)
+pygame.display.update()    
+pygame.time.wait(3000)
 
 pygame.quit()
